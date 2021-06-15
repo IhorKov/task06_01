@@ -21,21 +21,18 @@ public class StringOperation {
         String result = "";
         int index;
 
-        if(chArr.length % 2 == 0) {
+        if (chArr.length % 2 == 0) {
             index = chArr.length / 2;
             result += chArr[index - 1];
             result += chArr[index];
-        }
-        else {
+        } else {
             index = chArr.length / 2;
             result += chArr[index];
         }
 
         System.out.println("Результат: " + result);
 
-
-
-
+    }
 
     public static void reversString(String s) {
         char[] chArr = s.toCharArray();
@@ -44,24 +41,20 @@ public class StringOperation {
         String buffTwo = "";
         int index = 0;
 
-        if(chArr.length % 2 == 0){
-            for(int i = 0; i < chArr.length; i++){
-                if(i < chArr.length / 2){
+        if (chArr.length % 2 == 0) {
+            for (int i = 0; i < chArr.length; i++) {
+                if (i < chArr.length / 2) {
                     buffOne += chArr[i];
-                }
-                else {
+                } else {
                     buffTwo += chArr[i];
                 }
             }
             result = (buffTwo + buffOne);
-        }
-
-        else {
+        } else {
             for (int i = 0; i < chArr.length; i++) {
                 if (i < chArr.length / 2) {
                     buffOne += chArr[i];
-                }
-                else if (i == chArr.length / 2) {
+                } else if (i == chArr.length / 2) {
                     index = i;
                 } else {
                     buffTwo += chArr[i];
